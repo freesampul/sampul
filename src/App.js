@@ -1,14 +1,17 @@
-import Project from "./project";
-import Hello from "./hello";
-import Reachout from "./reachout";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Main from "./main";
+import Home from "./home";
+import Admin from "./admin";
 
 function App() {
   return (
-    <div>
-      <Hello />
-      <Project id={1} />
-      <Reachout />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="inc" element={<Home />} />
+        <Route path="admin" element={<Admin />} />
+      </Routes>
+    </BrowserRouter>  
   );
 }
 
