@@ -3,10 +3,8 @@ import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 function Reachout() {
   const links = [
-    { icon: <FaGithub />, url: 'https://github.com/yourprofile', label: 'GitHub' },
-    { icon: <FaInstagram />, url: 'https://instagram.com/yourprofile', label: 'Instagram' },
-    { icon: <FaLinkedin />, url: 'https://linkedin.com/in/yourprofile', label: 'LinkedIn' },
-    { icon: <FaTwitter />, url: 'https://twitter.com/yourprofile', label: 'Twitter' },
+    { icon: <FaGithub />, url: 'https://github.com/sqeejee', label: 'GitHub' },
+    { icon: <FaInstagram />, url: 'https://instagram.com/sampulaski', label: 'Instagram' },
   ];
 
   return (

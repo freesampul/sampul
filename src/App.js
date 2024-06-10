@@ -6,9 +6,7 @@ function App() {
   return (
     <div>
       <Hello />
-      <Project />
-      <Project />
-      <Project />
+      <Project id={1} />
       <Reachout />
     </div>
   );
