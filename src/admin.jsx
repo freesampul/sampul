@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getFirestore, collection, setDoc, doc } from 'firebase/firestore';
+import { getFirestore, collection, setDoc, doc, deleteDoc, getDocs } from 'firebase/firestore';
 import { initializeApp } from 'firebase/app';
 import './admin.css';  // Import the CSS file
 
@@ -23,9 +23,9 @@ const Admin = () => {
     const [teams, setTeams] = useState([]);
 
     const participants = [
-        "Alexandria Chen", "Amir Daoudi", "Andrew Rindone", "Archer Aguilar", "Audrey Kim",
+        "Alexandria Chen", "Amir Daoudi", "Andrew Rindone", "Archer Aguilar",
         "Avery Resnikoff", "Bennett Lee", "Carter James", "Cj Jia", "Clover Glass",
-        "Colin Hou", "Cooper Rieke", "David Chung", "Davis Fried", "Diya Desai",
+        "Colin Hou", "Cooper Rieke", "Davis Fried", "Diya Desai",
         "Elise Kennedy", "Ella Hammelman", "Emma Bing", "Emma Calista Lee", "Fletcher Graham",
         "Genevieve Watson", "Hansen Liao", "Henry Arinsburg", "Henry Kendall", "Hudson Shen",
         "Isaac Fujikawa", "Jack Lee", "Jai Wright", "James Salazar", "Jameson Fennimore",
@@ -35,7 +35,7 @@ const Admin = () => {
         "Milan Ramesh", "Miles Aguilar", "Natalia Landres", "Nathan You", "Nico Velamoor",
         "Nicole Mallion", "Oliver Elson", "Parker Rockwell", "Patrick Kim", "Raquel Reyes",
         "Rose Ananda", "Sacha Wiley", "Sally Straus", "Sam Azarbal", "Sam Carpenter",
-        "Sarah Anschell", "Sarina Hayoun", "SiÃ©na Orwitz", "Simren Bindra", "Sloan Butler",
+        "Sarah Anschell", "Sarina Hayoun", "Siéna Orwitz", "Sloan Butler",
         "Sophia Reyes", "Sophia Wong", "Sophie Ro", "Tali Kann", "Victoria Wu",
         "Vikram Wright", "Yamile Maxil-Gomez", "Zack Figlin"
     ];
@@ -43,7 +43,7 @@ const Admin = () => {
     const handleSliderChange = (event) => {
         const count = event.target.value;
         setGroupCount(count);
-        
+
         const names = [...teamNames];
         if (count > names.length) {
             for (let i = names.length; i < count; i++) {
@@ -62,6 +62,13 @@ const Admin = () => {
     };
 
     const generateGroups = async () => {
+        // Clear existing teams in Firestore
+        const teamsCollection = collection(db, 'teams');
+        const snapshot = await getDocs(teamsCollection);
+        snapshot.forEach(async (doc) => {
+            await deleteDoc(doc.ref);
+        });
+
         const shuffledParticipants = [...participants].sort(() => 0.5 - Math.random());
         const newTeams = Array.from({ length: groupCount }, () => []);
 
@@ -69,10 +76,7 @@ const Admin = () => {
             newTeams[index % groupCount].push(participant);
         });
 
-        setTeams(newTeams);
-
-        // Save the teams to Firestore
-        const teamsCollection = collection(db, 'teams');
+        // Save the new teams to Firestore
         for (let i = 0; i < newTeams.length; i++) {
             const teamData = {
                 name: teamNames[i] || `Team ${i + 1}`,
@@ -80,6 +84,9 @@ const Admin = () => {
             };
             await setDoc(doc(teamsCollection, `team_${i + 1}`), teamData);
         }
+
+        // Set the new teams
+        setTeams(newTeams);
     };
 
     const swapParticipants = (fromTeamIndex, toTeamIndex, participantIndex) => {
@@ -101,7 +108,7 @@ const Admin = () => {
                 className="slider"
             />
             <p>Number of groups: {groupCount}</p>
-            <p>People per group: {Math.ceil(participants.length / groupCount)}</p>
+            <p>People per group: {Math.ceil((participants.length + 1) / groupCount)}</p>
             
             {Array.from({ length: groupCount }).map((_, index) => (
                 <div key={index} className="team-input">
