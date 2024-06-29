@@ -1,13 +1,15 @@
-import Hello from "./hello";
-import Project from "./project";
-import Reachout from "./reachout";
+import './main.css';
+import mac from './mac.png';
 
 const Main = () => {
     return (
         <div>
-        <Hello />
-        <Project id={1} />
-        <Reachout />
+            <img src={mac} className='mac'></img>
+            <p>Hi, im sam
+            <br></br>
+            Here are my projects, elevator scroll and change the mac image at the same time
+
+            </p>
         </div>
     );
     }

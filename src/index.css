@@ -1,6 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-body {
-  background-color: #503E65;
+*
+{
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+body
+{
+  background-color: #f7fae8;
 }
