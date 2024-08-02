@@ -7,8 +7,6 @@ const Main = () => {
             <img src={mac} className='mac'></img>
             <p>Hi, im sam
             <br></br>
-            Here are my projects, elevator scroll and change the mac image at the same time
-
             </p>
         </div>
     );
