@@ -43,20 +43,7 @@ export default function Portfolio() {
     },
 
   ];
-
-
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MTSTPB3VBF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
   
-    gtag('config', 'G-MTSTPB3VBF');
-  </script>
-  
-
   return (
     <div className="bg-black text-white min-h-screen font-mono p-4">
       {/* Terminal Section */}
