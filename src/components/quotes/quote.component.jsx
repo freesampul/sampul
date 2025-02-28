@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./quote.styles.css";
 
 const maxMessageLength = 250;
