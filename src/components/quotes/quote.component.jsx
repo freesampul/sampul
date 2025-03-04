@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { useComments } from '../../contexts/commentsContext';
 import "./quote.styles.css";
-
-const maxMessageLength = 250;
-const url = "http://www.reddit.com/r/all/comments.json?limit=25"
-
 const images = [
   'https://images.unsplash.com/photo-1515469037678-4d4f8288bcbe?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDN8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D',
   'https://images.unsplash.com/photo-1506354259095-f4e94f2716b0?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDd8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D',
@@ -23,55 +20,43 @@ const images = [
   'https://images.unsplash.com/photo-1611608422635-7717846960d2?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 ];
 
+
 const Quote = () => {
-  const [comments, setComments] = useState([]);
+  const { comments } = useComments();
   const [currentQuote, setCurrentQuote] = useState("");
   const [backgroundImage, setBackgroundImage] = useState("");
+  const commentsRef = useRef(comments);
 
-  const fetchComments = () => {
-    console.log("fetching comments...");
-    fetch(url)
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw new Error('Network response was not ok.');
-      })
-      .then(data => {
-        console.log("Received data:", data);
-        const shortComments = data.data.children.filter(
-          (comment) => comment.data.body.length < maxMessageLength
-        );
-        setComments(shortComments);
-        console.log(`${shortComments.length} comments in queue`);
-      })
-      .catch(error => console.error('Error fetching comments:', error));
-  };
+  useEffect(() => {
+    commentsRef.current = comments;
+  }, [comments]);
 
-  const showQuote = () => {
-    if (comments.length > 0) {
-      const randomImage = images[Math.floor(Math.random() * images.length)];
-      setBackgroundImage(randomImage);
+  useEffect(() => {
+    const showQuote = () => {
+      if (commentsRef.current.length > 0) {
+        const randomImage = images[Math.floor(Math.random() * images.length)];
+        setBackgroundImage(randomImage);
 
-      const quote = comments.pop();
-      console.log("Displaying quote:", quote.data.body);
-      setCurrentQuote(quote.data.body);
+        const randomIndex = Math.floor(Math.random() * commentsRef.current.length);
+        const quote = commentsRef.current[randomIndex];
+        setCurrentQuote(quote.data.body);
 
-      if (comments.length === 0) {
-        fetchComments();
+        commentsRef.current = commentsRef.current.filter((_, index) => index !== randomIndex);
       }
-    }
-  };
+    };
 
-    fetchComments();
-    setInterval(showQuote, 10000);
+    const intervalId = setInterval(showQuote, 10000);
+    return () => clearInterval(intervalId);
+  }, [comments]);
 
   return (
     <div
       className="quote-container"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="quote-loading">{comments.length === 0 ? "Loading..." : ""}</div>
+      <div className="quote-loading">
+        {commentsRef.current.length === 0 ? "Loading..." : ""}
+      </div>
       <div className="quote-text">{currentQuote}</div>
     </div>
   );
