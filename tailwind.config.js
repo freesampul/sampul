@@ -6,11 +6,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#31263E",
-        secondary: {
-          100: "#FEF5EF",
-          200: "#FEF5EF",
-        },
       },
       keyframes: {
         fadeIn: {

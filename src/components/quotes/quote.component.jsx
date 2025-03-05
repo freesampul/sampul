@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, useRef } from "react";
 import { useComments } from '../../contexts/commentsContext';
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+=======
+import React, { useEffect, useState, useRef } from "react";
+import { useComments } from '../../contexts/commentsContext';
+>>>>>>> b7a6812 (:))
+>>>>>>> resume-fix
 import "./quote.styles.css";
 const images = [
   'https://images.unsplash.com/photo-1515469037678-4d4f8288bcbe?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDN8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D',
