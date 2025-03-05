@@ -1,0 +1,153 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Sam Pulaski} \\ \vspace{1pt}
+    \small 818-590-8106 $|$ \href{mailto:sampulaski@nyu.edu}{\underline{sampulaski@nyu.edu}} $|$ 
+    \href{linkedin.com/in/sam-pulaski-3098882ba/}{\underline{linkedin.com/in/sam-pulaski-3098882ba/}} $|$
+    \href{sampul.net}{\underline{sampul.net}} $|$
+    \href{https://github.com/freesampul}{\underline{github.com/freesampul}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeItemListStart
+  \resumeSubheading{Harvard Westlake}{Los Angeles, CA}
+    {}{Aug. 2018 -- Jun. 2024}
+  \resumeSubheading{New York University}{New York, NY}
+    {Bachelor of Arts in Computer Science}{Aug. 2024 -- Present}
+\resumeItemListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeItemListStart
+  \resumeSubheading{Jeni’s Splendid Ice Creams}{Los Angeles, CA}
+    {Customer Service Associate}{June 2022 -- June 2023}
+    \resumeItemListStart
+      \resumeItem{Provided high-quality service in a fast-paced team environment, ensuring customer satisfaction.}
+      \resumeItem{Managed cash transactions and resolved customer inquiries efficiently.}
+      \resumeItem{Maintained a clean and organized workspace while assisting in inventory management.}
+    \resumeItemListEnd
+
+  \resumeSubheading{Leading Peer-Support Program}{Los Angeles, CA}
+    {Mentorship and Leadership Role}{2022 -- 2024}
+    \resumeItemListStart
+      \resumeItem{Led and facilitated team-building exercises and discussions for students in grades 9-12.}
+      \resumeItem{Provided mentorship and guidance to younger students, fostering personal and academic growth.}
+      \resumeItem{Organized events and activities to promote inclusivity and community engagement.}
+    \resumeItemListEnd
+
+  \resumeSubheading{ZBT Fraternity Recruitment Chair}{New York, NY}
+    {Rush Chair}{2024 -- Present}
+    \resumeItemListStart
+      \resumeItem{Developed and executed strategic recruitment campaigns, increasing applicant numbers by 200+.}
+      \resumeItem{Coordinated and hosted rush events, engaging prospective members and fostering fraternity culture.}
+      \resumeItem{Worked with fraternity leadership to enhance outreach and community involvement.}
+    \resumeItemListEnd
+\resumeItemListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeItemListStart
+  \resumeProjectHeading
+      {\textbf{Depicto} $|$ \emph{Daily AI Image Puzzle Game}}{ \href{depicto.ai}{\underline{depicto.ai}}}
+      \resumeItemListStart
+        \resumeItem{Designed and built full-stack web app at HackHW (event winner).}
+        \resumeItem{Partnered with Blinkgame Inc. for iOS app development.}
+        \resumeItem{Garnered over 1000 users, five-star rating, and media coverage.}
+        \resumeItem{48\% user retention rate (avg. 8\%).}
+      \resumeItemListEnd
+
+  \resumeProjectHeading
+      {\textbf{Nsilico} $|$ \emph{Survey Responses Generated with LLMs}}{ \href{nsilico.net}{\underline{nsilico.net}}}
+      \resumeItemListStart
+        \resumeItem{Generate custom AI personalities for survey responses.}
+        \resumeItem{Built web interface and managed server deployment.}
+        \resumeItem{Tech stack: Next.js, TypeScript, React, Tailwind CSS, Firebase.}
+      \resumeItemListEnd
+
+  \resumeProjectHeading
+      {\textbf{Git} $|$ \emph{Version Control System}}{}
+      \resumeItemListStart
+        \resumeItem{Recreated Git in Java with commit functionality and internal object management.}
+      \resumeItemListEnd
+\resumeItemListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\resumeItemListStart
+    \resumeItem{\textbf{Languages}: Java, JavaScript, HTML/CSS, C}
+    \resumeItem{\textbf{Frameworks}: React, Node.js}
+    \resumeItem{\textbf{Developer Tools}: Git, Firebase, VS Code}
+\resumeItemListEnd
+
+\end{document}
