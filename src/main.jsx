@@ -1,14 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./main.css";
 import samImage from "./sam.jpeg"; 
 import depicto from "./proj-images/depicto.webp";
-import doople from "./proj-images/your-image-name(2).png"; 
+import doople from "./proj-images/doople.png";
 import emotions from "./proj-images/emotions.png";
 import git from "./proj-images/git.png";
 import nsil from "./proj-images/nsil.png";
+import mac from "./mac.png";
 
 export default function Portfolio() {
   const [showProjects, setShowProjects] = useState(false);
@@ -77,7 +75,7 @@ export default function Portfolio() {
           <p className="text-gray-300">Important Info:</p>
           <p className="flex flex-wrap justify-center gap-2">
             <a href="mailto:sampulaski@nyu.edu" className="text-green-400 hover:underline"> Email</a>
-            <a href="/" className="text-blue-400 hover:underline"> Resume</a>
+            <a href="/resume.pdf" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer"> Resume</a>
             <a href="https://github.com/freesampul" className="text-blue-400 hover:underline"> GitHub</a>
             <a href="https://www.linkedin.com/in/sam-pulaski-3098882ba/" className="text-pink-400 hover:underline"> LinkedIn</a>
             <a href="https://instagram.com/sampulaski" className="text-green-400 hover:underline"> Instagram</a>
@@ -118,12 +116,8 @@ export default function Portfolio() {
     </div>
   );
 }
-=======
->>>>>>> resume-fix
-import React, { useEffect, useState } from 'react';
-import './main.css';
-import mac from './mac.png';
 
+// Separate Component for Fetching Comments
 const Main = () => {
   const [comments, setComments] = useState([]);
   const [error, setError] = useState(null);
@@ -137,8 +131,7 @@ const Main = () => {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        setComments(data);
-        console.log("Parsed data:", data);
+        setComments(data.data.children); // Correctly setting the comments array
       } catch (error) {
         setError(error);
         console.error('Error fetching comments:', error);
@@ -148,31 +141,25 @@ const Main = () => {
     fetchComments();
   }, []);
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
-
   return (
-    <div>
-      <img src={mac} className='mac' alt='Mac'></img>
-      <p>Hi, I'm Sam</p>
-      <div>
-        {comments.length > 0 ? (
-          comments.data.children.map((comment, index) => (
-            <div key={index}>
-              <p>{comment.data.body}</p>
+    <div className="bg-gray-900 text-white p-4">
+      <img src={mac} className="w-full h-auto rounded-md" alt="Mac" />
+      <p className="text-center text-xl mt-2">Hi, I'm Sam</p>
+      <div className="mt-4">
+        {error ? (
+          <p className="text-red-500">Error: {error.message}</p>
+        ) : comments.length > 0 ? (
+          comments.map((comment, index) => (
+            <div key={index} className="border-b border-gray-700 py-2">
+              <p className="text-gray-300">{comment.data.body}</p>
             </div>
           ))
         ) : (
-          <p></p>
+          <p className="text-gray-500">Loading comments...</p>
         )}
       </div>
     </div>
   );
 };
 
-export default Main;
-<<<<<<< HEAD
-=======
->>>>>>> b7a6812 (:))
->>>>>>> resume-fix
+export { Main };
