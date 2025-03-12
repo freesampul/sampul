@@ -49,13 +49,17 @@ export default function Portfolio() {
       {/* Terminal Section */}
       <div className="p-6 max-w-2xl w-full mx-auto mt-6 border border-gray-700 rounded-lg shadow-lg flex flex-col items-center text-center">
         {/* User Info */}
-        <div className="flex flex-col md:flex-row items-center space-x-0 md:space-x-4 w-full">
+        <div className="flex flex-col md:flex-row items-center md:items-start space-x-0 md:space-x-4 w-full">
+          {/* Profile Image */}
           <img
             src={samImage}
             alt="Sam Pulaski"
             className="w-24 h-24 rounded-full border border-gray-500"
           />
-          <div className="mt-4 md:mt-0">
+          {/* Spacer to prevent shifting */}
+          <div className="hidden md:block w-6"></div>
+          {/* Text Content */}
+          <div className="w-full text-center md:text-left">
             <h1 className="text-2xl font-bold text-yellow-400">sampulaski@nyu.edu</h1>
             <p className="text-gray-300">--------------------</p>
             <p className="text-gray-400">
@@ -71,15 +75,15 @@ export default function Portfolio() {
         </div>
 
         {/* Contact & Links */}
-        <div className="mt-4 w-full">
+        <div className="mt-4 w-full flex flex-col items-center text-center">
           <p className="text-gray-300">Important Info:</p>
-          <p className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-4 mt-2">
             <a href="mailto:sampulaski@nyu.edu" className="text-green-400 hover:underline"> Email</a>
             <a href="/resume.pdf" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer"> Resume</a>
             <a href="https://github.com/freesampul" className="text-blue-400 hover:underline"> GitHub</a>
             <a href="https://www.linkedin.com/in/sam-pulaski-3098882ba/" className="text-pink-400 hover:underline"> LinkedIn</a>
             <a href="https://instagram.com/sampulaski" className="text-green-400 hover:underline"> Instagram</a>
-          </p>
+          </div>
         </div>
 
         {/* Projects Section Toggle */}
@@ -131,7 +135,7 @@ const Main = () => {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        setComments(data.data.children); // Correctly setting the comments array
+        setComments(data.data.children);
       } catch (error) {
         setError(error);
         console.error('Error fetching comments:', error);
