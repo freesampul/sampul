@@ -11,8 +11,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/quote" element={<Quote />} />
-          <Route path="/libs" element={<Madlibs />} />
         </Routes>
       </BrowserRouter>
     </CommentsProvider>
