@@ -63,7 +63,7 @@ export default function Portfolio() {
             <h1 className="text-2xl font-bold text-yellow-400">sampulaski@nyu.edu</h1>
             <p className="text-gray-300">--------------------</p>
             <p className="text-gray-400">
-              Hi, I'm <span className="text-indigo-400 font-bold">Sam Pulaski</span>, a full-stack developer, <span className="text-indigo-400 font-bold">NYU</span> student, and (aspiring) entrepreneur. This summer I'll be working as a software engineering intern at 
+              Hi, I'm <span className="text-indigo-400 font-bold">Sam Pulaski</span>, a full-stack developer, <span className="text-indigo-400 font-bold">NYU</span> student, and (aspiring) entrepreneur. This summer I'm working as a software engineering intern at 
               <span className="text-blue-500"> Ticketmaster.</span> I enjoy experimenting with <span className="text-indigo-400"> creative coding</span>.
             </p>
             <p className="text-gray-400 mt-2">
@@ -95,6 +95,15 @@ export default function Portfolio() {
           </button>
         </div>
       </div>
+                {/* Add a section for three quotes, called "Awards and accolades" */}
+          <div className="mt-6 text-gray-300">
+            <h3 className="text-lg font-bold text-yellow-400">Awards and Accolades</h3>
+            <ul className="list-disc list-inside mt-2 space-y-2">
+              <li>Leadership award - 4th grade class</li>
+              <li>"The most handsome boy on earth" - Mom</li>
+              <li>"Most I've ever seen anyone eat" - Buffalo Wild Wings waiter, all you can eat promotion</li>
+            </ul>
+            </div>
 
       {/* Projects Section */}
       {showProjects && (
@@ -119,50 +128,3 @@ export default function Portfolio() {
     </div>
   );
 }
-
-// Separate Component for Fetching Comments
-const Main = () => {
-  const [comments, setComments] = useState([]);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchComments = async () => {
-      const url = 'https://www.reddit.com/r/all/comments.json?limit=25';
-      try {
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        setComments(data.data.children);
-      } catch (error) {
-        setError(error);
-        console.error('Error fetching comments:', error);
-      }
-    };
-
-    fetchComments();
-  }, []);
-
-  return (
-    <div className="bg-gray-900 text-white p-4">
-      <img src={mac} className="w-full h-auto rounded-md" alt="Mac" />
-      <p className="text-center text-xl mt-2">Hi, I'm Sam</p>
-      <div className="mt-4">
-        {error ? (
-          <p className="text-red-500">Error: {error.message}</p>
-        ) : comments.length > 0 ? (
-          comments.map((comment, index) => (
-            <div key={index} className="border-b border-gray-700 py-2">
-              <p className="text-gray-300">{comment.data.body}</p>
-            </div>
-          ))
-        ) : (
-          <p className="text-gray-500">Loading comments...</p>
-        )}
-      </div>
-    </div>
-  );
-};
-
-export { Main };
