@@ -7,6 +7,7 @@ import emotions from "./proj-images/emotions.png";
 import git from "./proj-images/git.png";
 import nsil from "./proj-images/nsil.png";
 import mac from "./mac.png";
+import junk from "./proj-images/junk.webp";
 
 export default function Portfolio() {
   const [showProjects, setShowProjects] = useState(false);
@@ -41,6 +42,12 @@ export default function Portfolio() {
       description: "Build an avatar with hand-drawn assets",
       link: "https://doople.netlify.app/",
       image: doople
+    },
+    {
+      title: "digitaljunk",
+      description: "A daily pixel art show",
+      link: "https://digitaljunk.art",
+      image: junk
     },
   ];
   
@@ -95,15 +102,6 @@ export default function Portfolio() {
           </button>
         </div>
       </div>
-                {/* Add a section for three quotes, called "Awards and accolades" */}
-          <div className="mt-6 text-gray-300">
-            <h3 className="text-lg font-bold text-yellow-400">Awards and Accolades</h3>
-            <ul className="list-disc list-inside mt-2 space-y-2">
-              <li>Leadership award - 4th grade class</li>
-              <li>"The most handsome boy on earth" - Mom</li>
-              <li>"Most I've ever seen anyone eat" - Buffalo Wild Wings waiter, all you can eat promotion</li>
-            </ul>
-            </div>
 
       {/* Projects Section */}
       {showProjects && (
@@ -125,6 +123,22 @@ export default function Portfolio() {
           </div>
         </div>
       )}
+
+      {/* Awards and Accolades Section */}
+      <div className="mt-6 max-w-2xl w-full mx-auto border border-gray-700 rounded-lg shadow-lg p-6">
+        <h2 className="text-lg font-bold text-yellow-400 text-center mb-4">Awards and Accolades</h2>
+        <div className="space-y-3 text-center">
+          <div className="text-gray-300">
+            Leadership award - 4th grade class
+          </div>
+          <div className="text-gray-300">
+            "The most handsome boy on earth" - Mom
+          </div>
+          <div className="text-gray-300">
+            "Most I've ever seen anyone eat" - Buffalo Wild Wings waiter, all you can eat promotion
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
