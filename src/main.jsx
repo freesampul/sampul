@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./main.css";
 import samImage from "./sam.jpeg"; 
 import depicto from "./proj-images/depicto.webp";
@@ -6,7 +6,6 @@ import doople from "./proj-images/doople.png";
 import emotions from "./proj-images/emotions.png";
 import git from "./proj-images/git.png";
 import nsil from "./proj-images/nsil.png";
-import mac from "./mac.png";
 import junk from "./proj-images/junk.webp";
 
 export default function Portfolio() {
@@ -44,7 +43,7 @@ export default function Portfolio() {
       image: doople
     },
     {
-      title: "digitaljunk",
+      title: "digitaljunk", 
       description: "A daily pixel art show",
       link: "https://digitaljunk.art",
       image: junk
