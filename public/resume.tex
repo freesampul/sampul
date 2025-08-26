@@ -3,157 +3,134 @@
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
-
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
+\fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generated PDF is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
 \newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
-
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-4pt}
 }
-
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
     \end{tabular*}\vspace{-5pt}
 }
-
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-%----------HEADING----------
 \begin{center}
-    \textbf{\Huge \scshape Sam Pulaski} \\ \vspace{1pt}
-    \small 818-590-8106 $|$ \href{mailto:sampulaski@nyu.edu}{\underline{sampulaski@nyu.edu}} $|$ 
-    \href{linkedin.com/in/sampul}{\underline{linkedin.com/in/sampul}} $|$
-    \href{sampul.net}{\underline{sampul.net}} $|$
-    \href{https://github.com/freesampul}{\underline{github.com/freesampul}}
+  \textbf{\Huge \scshape Sam Pulaski} \\ \vspace{1pt}
+  \small 818-590-8106 $|$ \href{mailto:sampulaski@nyu.edu}{\underline{sampulaski@nyu.edu}} $|$ 
+  \href{https://linkedin.com/in/sampul}{\underline{linkedin.com/in/sampul}} $|$
+  \href{https://sampul.net}{\underline{sampul.net}} $|$
+  \href{https://github.com/freesampul}{\underline{github.com/freesampul}}
 \end{center}
 
 %-----------EDUCATION-----------
 \section{Education}
 \resumeItemListStart
   \resumeSubheading{New York University}{New York, NY}
-    {Bachelor of Arts in Computer Science, GPA: 3.63/4.0}{Aug. 2024 -- Present}
-  \resumeItem{\small \textbf{Relevant Coursework:} Data Structures \& Algorithms, Computer Systems Organization, Calculus}
-  
+    {B.A. in Individualized Study: Computer Science and Business, GPA: 3.63}{Aug 2024 – Present}
+    \resumeItem{Relevant Coursework: Data Structures \& Algorithms, Computer Systems, Calculus}
+    
   \resumeSubheading{Harvard-Westlake School}{Los Angeles, CA}
-    {Mock Trial: California MVP Award}{Aug. 2018 -- Jun. 2024}
+    {California Mock Trial MVP}{Aug 2018 – Jun 2024}
 \resumeItemListEnd
+
 %-----------EXPERIENCE-----------
 \section{Experience}
 \resumeItemListStart
-  \resumeSubheading{\href{https://nsilico.net}{Nsilico}}{\underline{nsilico.net}}
-  {Software Engineer and Co-Founder}{2025}
-    \resumeItemListStart
-      \resumeItem{Developed an LLM-powered tool to generate AI-driven survey responses tailored to diverse user personas.}
-      \resumeItem{Architected and deployed the full-stack web application, enabling seamless user interaction.}
-      \resumeItem{Met with 5 different VC firms: Pear VC, XFund, Beta University, Stanford BASES, NYU Ent. Labs.}
-      \resumeItem{Tech stack: Next.js, TypeScript, React, Tailwind CSS, Firebase.}
-    \resumeItemListEnd
 
-  \resumeSubheading{\href{https://depicto.ai}{Depicto}}{\underline{depicto.ai}}
-    {Software Engineer and Co-Founder}{2024 -- Present}
-    \resumeItemListStart
-      \resumeItem{Designed and built full-stack web app at HackHW (event winner).}
-      \resumeItem{Developed a daily puzzle game featuring AI-generated images.}
-      \resumeItem{Partnered with Blinkgame Inc. for iOS app development.}
-      \resumeItem{Garnered over 1000 users, five-star rating, and media coverage.}
-      \resumeItem{Achieved a 48\% user retention rate (industry average: 8\%).}
-    \resumeItemListEnd
+\resumeSubheading{Software Engineering Intern – Ticketmaster}{Summer 2025}
+{Demand Team – Artist Presale \& Internal Tools}{}
+\resumeItemListStart
+  \resumeItem{Migrated backend SMS notification functions from legacy services to MongoDB, supporting artist presale campaigns.}
+  \resumeItem{Rebuilt internal tools in React/Next.js with GraphQL and Apollo, improving promoter workflow UX.}
+  \resumeItem{Contributed to large-scale infrastructure used for \textbf{200K+} fan SMS campaigns; participated in standups and code reviews.}
+\resumeItemListEnd
 
-  \resumeSubheading{ZBT Fraternity Philanthropy and Recruitment}{New York, NY}
-    {Fraternity Representative for NYU Panhellenic Philanthropy}{2024 -- Present}
-    \resumeItemListStart
-      \resumeItem{Worked as Fraternity Representative for NYU, managed over \textbf{\$40,000} annually for NYDM charity.}
-      \resumeItem{Developed and executed strategic recruitment campaigns, increasing applicant numbers by 200+.}
-    \resumeItemListEnd
-    \resumeSubheading{Harvard-Westlake Inc.}{Los Angeles, CA}
-    {Leader}{June 2018 -- June 2024}
-    \resumeItemListStart
-    \resumeItem{Led a team to organize a one-week, intensive \textbf{business \& product development camp} for 80+ students.}
-    \resumeItem{Delivered presentations on \textbf{product market fit, user research, MVP development, and competitive analysis}, teaching participants core product management principles.}
-    \resumeItem{Oversaw a \textbf{\$56,000 budget}, managing logistics for dining, event planning, and operational efficiency.}
-  \resumeItemListEnd
+\resumeSubheading{Co-Founder / Software Engineer – nsilico.net}{2025}
+{AI-Powered Survey Response Generator}{}
+\resumeItemListStart
+  \resumeItem{Built full-stack web app using Next.js, TypeScript, and Firebase to simulate LLM-based persona responses.}
+  \resumeItem{Pitched to VC firms including Pear VC, Stanford BASES, NYU Ent. Labs.}
+\resumeItemListEnd
 
-  \resumeSubheading{Jeni’s Splendid Ice Creams}{Los Angeles, CA}
-    {Customer Service Associate}{June 2022 -- June 2023}
-    \resumeItemListStart
-      \resumeItem{Provided high-quality service in a fast-paced team environment, ensuring customer satisfaction.}
-    \resumeItemListEnd
+\resumeSubheading{Co-Founder – depicto.ai}{2022 – 2024}
+{AI-Powered Puzzle Game}{}
+\resumeItemListStart
+  \resumeItem{Developed HackHW-winning full-stack site with daily image-based puzzles and 1K+ users.}
+  \resumeItem{Partnered with Blinkgame Inc. for iOS app launch. Maintained \textbf{48\%} retention rate (industry avg: 8\%).}
+\resumeItemListEnd
+
+\resumeSubheading{Fraternity Philanthropy Chair – ZBT}{2024 – 2025}
+{NYU Panhellenic and NYDM}{}
+\resumeItemListStart
+\resumeItem{Raised \$40K+ for NYDM charity; led recruitment campaigns boosting applicants by 200+.}
+\resumeItemListEnd
+
+\resumeSubheading{Leader – Harvard-Westlake Inc.}{2018 – 2024}
+{Summer Business Bootcamp Organizer}{}
+\resumeItemListStart
+\resumeItem{Led business camp for 80+ students, teaching MVPs, PMF, and research; managed \textbf{\$56K} budget.}
+\resumeItemListEnd
+
 \resumeItemListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
 \resumeItemListStart
-  \resumeProjectHeading
-      {\textbf{Emotional Shopping} $|$ \emph{Computer Vision Product Reccomendations}}{ \href{https://freesampul.github.io/EmotionalShopping/public/index.html}{\underline{Github Page}}}
-      \resumeItemListStart
-        \resumeItem{Used Face-api.js library to read facial expressions.}
-        \resumeItem{Reccomendations of products based on a user's emotion.}
-        \resumeItem{Tech stack: React, Tailwind}
-      \resumeItemListEnd
-  \resumeProjectHeading
-      {\textbf{Git} $|$ \emph{Version Control System}}{\href{https://github.com/freesampul/Git}{\underline{Github Page}}}
-      \resumeItemListStart
-        \resumeItem{Recreated Git in Java with commit functionality and internal object management.}
-      \resumeItemListEnd
+   \resumeProjectHeading{\textbf{Emotional Shopping} – AI Product Recommendations}{\href{https://freesampul.github.io/EmotionalShopping/public/index.html}{\underline{Live Site}}}
+  \resumeItemListStart
+    \resumeItem{Face-api.js + emotion detection to recommend products in real-time. Stack: React, Tailwind}
+  \resumeItemListEnd
+
+  \resumeProjectHeading{\textbf{Git} – Java VCS Implementation}{\href{https://github.com/freesampul/Git}{\underline{GitHub}}}
+  \resumeItemListStart
+    \resumeItem{Rebuilt core Git features in Java including commit history, object store, and branching.}
+  \resumeItemListEnd
 \resumeItemListEnd
 
-%-----------TECHNICAL SKILLS-----------
+%-----------SKILLS-----------
 \section{Technical Skills}
 \resumeItemListStart
-    \resumeItem{\textbf{Developer Tools}: Java, JavaScript, React, HTML/CSS, C, React, Node.js, Git, Firebase, VS Code}
-    \resumeItem{\textbf{Skills}: Deck creation, Public Speaking, Leadership, Teamwork}
-    \resumeItem{\textbf{Interests}:Entrepreneurship, Frisbee, Travel, Language Learning, Piano, Drawing}
+  \resumeItem{\textbf{Languages/Frameworks:} Java, JavaScript, React, Next.js, TypeScript, C, Firebase, HTML/CSS, GraphQL, Tailwind, Node.js}
+  \resumeItem{\textbf{Tools:} Git, VS Code, Figma, Photoshop, Premiere Pro, After Effects}
+  \resumeItem{\textbf{Soft Skills:} Public Speaking, Leadership, Team Collaboration}
+  \resumeItem{\textbf{Interests:} Entrepreneurship, Frisbee, Travel, Language Learning, Piano, Drawing}
 \resumeItemListEnd
 
 \end{document}
