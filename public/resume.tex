@@ -14,6 +14,7 @@
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.12in]}
 
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -23,6 +24,8 @@
 \urlstyle{same}
 \raggedbottom
 \raggedright
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{1pt}
 \setlength{\tabcolsep}{0in}
 
 \titleformat{\section}{
@@ -45,7 +48,6 @@
       \small#1 & #2 \\
     \end{tabular*}\vspace{-5pt}
 }
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
@@ -63,8 +65,8 @@
 \section{Education}
 \resumeItemListStart
   \resumeSubheading{New York University}{New York, NY}
-    {B.A. in Individualized Study: Computer Science and Business, GPA: 3.63}{Aug 2024 – Present}
-    \resumeItem{Relevant Coursework: Data Structures \& Algorithms, Computer Systems, Calculus}
+  {B.A. in Individualized Study: Computer Science and Business, GPA: 3.63 \textbar\ Expected May 2028}{Aug 2024 – Present}
+  \resumeItem{Relevant Coursework: Data Structures \& Algorithms, Computer Systems Organization, Applied Internet Technology, Calculus}
     
   \resumeSubheading{Harvard-Westlake School}{Los Angeles, CA}
     {California Mock Trial MVP}{Aug 2018 – Jun 2024}
@@ -74,19 +76,19 @@
 \section{Experience}
 \resumeItemListStart
 
-\resumeSubheading{Software Engineering Intern – Ticketmaster}{Summer 2025}
-{Demand Team – Artist Presale \& Internal Tools}{}
+\resumeSubheading{Software Engineering Intern -- Ticketmaster}{Summer 2025}
+{Demand Team -- Artist Presale \& Internal Tools}{}
 \resumeItemListStart
-  \resumeItem{Migrated backend SMS notification functions from legacy services to MongoDB, supporting artist presale campaigns.}
-  \resumeItem{Rebuilt internal tools in React/Next.js with GraphQL and Apollo, improving promoter workflow UX.}
-  \resumeItem{Contributed to large-scale infrastructure used for \textbf{200K+} fan SMS campaigns; participated in standups and code reviews.}
+  \resumeItem{Migrated backend SMS-notification workflows from legacy services to a MongoDB-backed path for artist presale programs.}
+  \resumeItem{Rebuilt and extended promoter-facing internal tools in \textbf{React/Next.js} using \textbf{GraphQL} and \textbf{Apollo} to streamline common workflows.}
+  \resumeItem{Implemented reusable UI components, opened PRs, and participated in code reviews and daily stand-ups.}
 \resumeItemListEnd
 
-\resumeSubheading{Co-Founder / Software Engineer – nsilico.net}{2025}
+\resumeSubheading{Co-Founder / Software Engineer – nsilico.net}{2024 – 2025}
 {AI-Powered Survey Response Generator}{}
 \resumeItemListStart
-  \resumeItem{Built full-stack web app using Next.js, TypeScript, and Firebase to simulate LLM-based persona responses.}
-  \resumeItem{Pitched to VC firms including Pear VC, Stanford BASES, NYU Ent. Labs.}
+  \resumeItem{Architected and deployed a full-stack LLM-driven survey platform with persona simulation using Next.js, TypeScript, and Firebase.}
+  \resumeItem{Pitched product to VCs (Pear VC, Stanford BASES, NYU Ent. Labs) and onboarded 50+ early testers.}
 \resumeItemListEnd
 
 \resumeSubheading{Co-Founder – depicto.ai}{2022 – 2024}
@@ -96,16 +98,17 @@
   \resumeItem{Partnered with Blinkgame Inc. for iOS app launch. Maintained \textbf{48\%} retention rate (industry avg: 8\%).}
 \resumeItemListEnd
 
-\resumeSubheading{Fraternity Philanthropy Chair – ZBT}{2024 – 2025}
-{NYU Panhellenic and NYDM}{}
+\resumeSubheading{Fraternity Recruitment Chair – ZBT}{2024 – Present}
+{NYU Panhellenic and NYDM Charity}{}
 \resumeItemListStart
-\resumeItem{Raised \$40K+ for NYDM charity; led recruitment campaigns boosting applicants by 200+.}
+  \resumeItem{Directed recruitment campaigns increasing applicants by 200+; achieved highest engagement across all campus orgs.}
+  \resumeItem{Organized fundraising initiatives raising \textbf{\$40K+} for NYDM children’s hospital charity.}
 \resumeItemListEnd
 
 \resumeSubheading{Leader – Harvard-Westlake Inc.}{2018 – 2024}
 {Summer Business Bootcamp Organizer}{}
 \resumeItemListStart
-\resumeItem{Led business camp for 80+ students, teaching MVPs, PMF, and research; managed \textbf{\$56K} budget.}
+\resumeItem{Led business camp for 80+ students, teaching MVPs, PMF, and research; managed \textbf{\$76K} budget.}
 \resumeItemListEnd
 
 \resumeItemListEnd
