@@ -69,8 +69,8 @@ export default function Portfolio() {
             <h1 className="text-2xl font-bold text-yellow-400">sampulaski@nyu.edu</h1>
             <p className="text-gray-300">--------------------</p>
             <p className="text-gray-400">
-              Hi, I'm <span className="text-indigo-400 font-bold">Sam Pulaski</span>, a full-stack developer, <span className="text-indigo-400 font-bold">NYU</span> student, and (aspiring) entrepreneur. This summer I'm working as a software engineering intern at 
-              <span className="text-blue-500"> Ticketmaster.</span> I enjoy experimenting with <span className="text-indigo-400"> creative coding</span>.
+              Hi, I'm <span className="text-indigo-400 font-bold">Sam Pulaski</span>, a full-stack developer, <span className="text-indigo-400 font-bold">NYU</span> student, and (aspiring) entrepreneur. Right now, I'm working as an admissions ambassador at <span className="text-indigo-400 font-bold">NYU</span>. Last summer, I worked as a software engineering intern at
+              <span className="text-blue-500"> Ticketmaster. I'm looking for work this summer if you're interested in hiring me 👀</span> I enjoy experimenting with <span className="text-indigo-400"> creative coding</span>.
             </p>
             <p className="text-gray-400 mt-2">
               Passionate about <span className="text-red-400"> web development </span> and crafting
