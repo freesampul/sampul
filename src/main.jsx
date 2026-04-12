@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./main.css";
 import samImage from "./sam.jpeg";
 import depicto from "./proj-images/depicto.webp";
@@ -8,8 +7,6 @@ import git from "./proj-images/git.png";
 import nsil from "./proj-images/nsil.png";
 
 export default function Portfolio() {
-  const [showProjects, setShowProjects] = useState(true);
-
   const projects = [
     {
       title: "Depicto",
@@ -86,8 +83,7 @@ export default function Portfolio() {
       </div>
 
       {/* Projects Section */}
-      {showProjects && (
-        <div className="mt-6 max-w-2xl w-full mx-auto border border-gray-700 rounded-lg shadow-lg p-4">
+      <div className="mt-6 max-w-2xl w-full mx-auto border border-gray-700 rounded-lg shadow-lg p-4">
           <h2 className="text-lg font-bold text-yellow-400 text-center">Projects</h2>
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
             {projects.map((project, index) => (
@@ -103,8 +99,7 @@ export default function Portfolio() {
               </div>
             ))}
           </div>
-        </div>
-      )}
+      </div>
 
       {/* Awards and Accolades Section */}
       <div className="mt-6 max-w-2xl w-full mx-auto border border-gray-700 rounded-lg shadow-lg p-6">
