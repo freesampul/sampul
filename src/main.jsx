@@ -1,38 +1,37 @@
 import { useState } from "react";
 import "./main.css";
-import samImage from "./sam.jpeg"; 
+import samImage from "./sam.jpeg";
 import depicto from "./proj-images/depicto.webp";
 import doople from "./proj-images/doople.png";
 import emotions from "./proj-images/emotions.png";
 import git from "./proj-images/git.png";
 import nsil from "./proj-images/nsil.png";
-import junk from "./proj-images/junk.webp";
 
 export default function Portfolio() {
-  const [showProjects, setShowProjects] = useState(false);
+  const [showProjects, setShowProjects] = useState(true);
 
   const projects = [
     {
       title: "Depicto",
-      description: "An App that turns AI-generated images into a daily guessing game",
+      description: "Daily AI-generated image guessing game — hit 48% day-30 retention, 6× the industry average.",
       link: "https://depicto.ai",
       image: depicto
     },
     {
       title: "Nsilico",
-      description: "Get survey answers quickly.",
+      description: "AI-powered survey response generation — persona-based answers at scale.",
       link: "https://nsilico.net",
       image: nsil
     },
     {
       title: "Git",
-      description: "Working version control, from the ground up",
+      description: "VCS built from scratch in Java — SHA-1 hashing, blob/tree/commit model, branching, and merge.",
       link: "https://github.com/freesampul/Git",
       image: git
     },
     {
       title: "Emotional Shopping",
-      description: "Product Recommendations based on your mood",
+      description: "Real-time emotion-driven product recommendations via facial expression detection with Face-api.js.",
       link: "https://freesampul.github.io/EmotionalShopping/public/index.html",
       image: emotions
     },
@@ -41,12 +40,6 @@ export default function Portfolio() {
       description: "Build an avatar with hand-drawn assets",
       link: "https://doople.netlify.app/",
       image: doople
-    },
-    {
-      title: "digitaljunk", 
-      description: "A daily pixel art show",
-      link: "https://digitaljunk.art",
-      image: junk
     },
   ];
   
@@ -69,37 +62,27 @@ export default function Portfolio() {
             <h1 className="text-2xl font-bold text-yellow-400">sampulaski@nyu.edu</h1>
             <p className="text-gray-300">--------------------</p>
             <p className="text-gray-400">
-              Hi, I'm <span className="text-indigo-400 font-bold">Sam Pulaski</span>, a full-stack developer, <span className="text-indigo-400 font-bold">NYU</span> student, and (aspiring) entrepreneur. Right now, I'm working as an admissions ambassador at <span className="text-indigo-400 font-bold">NYU</span>. Last summer, I worked as a software engineering intern at
-              <span className="text-blue-500"> Ticketmaster. I'm looking for work this summer if you're interested in hiring me 👀</span> I enjoy experimenting with <span className="text-indigo-400"> creative coding</span>.
+              Hi, I'm <span className="text-indigo-400 font-bold">Sam Pulaski</span> — a full-stack developer, <span className="text-indigo-400 font-bold">NYU</span> CS student, and builder. Most recently I interned at <span className="text-blue-400 font-bold">Ticketmaster</span> on the Demand team, scaling SMS workflows to 200K+ messages/day and rebuilding internal tools in React and GraphQL. I like building things that are fast, useful, and occasionally weird.
             </p>
             <p className="text-gray-400 mt-2">
-              Passionate about <span className="text-red-400"> web development </span> and crafting
-              <span className="text-green-400"> interactive experiences</span>.
+              Currently: <span className="text-green-400">open to summer 2026 internships</span>. Feel free to reach out.
             </p>
           </div>
         </div>
 
         {/* Contact & Links */}
         <div className="mt-4 w-full flex flex-col items-center text-center">
-          <p className="text-gray-300">Important Info:</p>
           <div className="flex flex-wrap justify-center gap-4 mt-2">
             <a href="mailto:sampulaski@nyu.edu" className="text-green-400 hover:underline"> Email</a>
             <a href="/resume.pdf" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer"> Resume</a>
             <a href="https://github.com/freesampul" className="text-blue-400 hover:underline"> GitHub</a>
             <a href="https://www.linkedin.com/in/sam-pulaski-3098882ba/" className="text-pink-400 hover:underline"> LinkedIn</a>
-            <a href="https://instagram.com/sampulaski" className="text-green-400 hover:underline"> Instagram</a>
+
           </div>
         </div>
 
         {/* Projects Section Toggle */}
-        <div className="mt-4">
-          <button
-            className="text-gray-300 hover:text-white"
-            onClick={() => setShowProjects(!showProjects)}
-          >
-            {showProjects ? "Hide Projects" : "Show Projects"}
-          </button>
-        </div>
+
       </div>
 
       {/* Projects Section */}
