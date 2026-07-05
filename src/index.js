@@ -1,14 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css'; // Ensure this line is present
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import Portfolio from './main';
 
-ReactDOM.render(
+createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <Portfolio />
+  </React.StrictMode>
 );
-
-reportWebVitals();

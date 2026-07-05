@@ -1,4 +1,3 @@
-import "./main.css";
 import samImage from "./sam.jpeg";
 import depicto from "./proj-images/depicto.webp";
 import doople from "./proj-images/doople.png";
@@ -10,7 +9,7 @@ export default function Portfolio() {
   const projects = [
     {
       title: "Depicto",
-      description: "Daily AI-generated image guessing game — hit 48% day-30 retention, 6× the industry average.",
+      description: "Daily AI-generated image guessing game — hit 48% day-30 retention, 6× the industry average. Started as Backwords, a hackathon project.",
       link: "https://depicto.ai",
       image: depicto
     },
@@ -39,18 +38,20 @@ export default function Portfolio() {
       image: doople
     },
   ];
-  
+
   return (
     <div className="bg-black text-white min-h-screen font-mono p-4 flex flex-col items-center">
       {/* Terminal Section */}
-      <div className="p-6 max-w-2xl w-full mx-auto mt-6 border border-gray-700 rounded-lg shadow-lg flex flex-col items-center text-center">
+      <header className="p-6 max-w-2xl w-full mx-auto mt-6 border border-gray-700 rounded-lg shadow-lg flex flex-col items-center text-center">
         {/* User Info */}
         <div className="flex flex-col md:flex-row items-center md:items-start space-x-0 md:space-x-4 w-full">
           {/* Profile Image */}
           <img
             src={samImage}
             alt="Sam Pulaski"
-            className="w-24 h-24 rounded-full border border-gray-500"
+            width="96"
+            height="96"
+            className="w-24 h-24 rounded-full border border-gray-500 object-cover"
           />
           {/* Spacer to prevent shifting */}
           <div className="hidden md:block w-6"></div>
@@ -59,7 +60,7 @@ export default function Portfolio() {
             <h1 className="text-2xl font-bold text-yellow-400">sampulaski@nyu.edu</h1>
             <p className="text-gray-300">--------------------</p>
             <p className="text-gray-400">
-              Hi, I'm <span className="text-indigo-400 font-bold">Sam Pulaski</span> — a full-stack developer, <span className="text-indigo-400 font-bold">NYU</span> CS student, and builder. Most recently I interned at <span className="text-blue-400 font-bold">Ticketmaster</span> on the Demand team, scaling SMS workflows to 200K+ messages/day and rebuilding internal tools in React and GraphQL. I like building things that are fast, useful, and occasionally weird.
+              Hi, I'm <span className="text-indigo-400 font-bold">Sam Pulaski</span> — a <span className="text-indigo-400 font-bold">NYU</span> CS student interested in fintech and product. Most recently I interned at <span className="text-blue-400 font-bold">Ticketmaster</span> on the Demand team, scaling SMS workflows to 200K+ messages/day and rebuilding internal tools in React and GraphQL. I like building things that are fast, useful, and occasionally weird.
             </p>
             <p className="text-gray-400 mt-2">
               Currently: <span className="text-green-400">open to summer 2026 internships</span>. Feel free to reach out.
@@ -73,15 +74,12 @@ export default function Portfolio() {
             <a href="mailto:sampulaski@nyu.edu" className="text-green-400 hover:underline"> Email</a>
             <a href="/resume.pdf" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer"> Resume</a>
             <a href="https://github.com/freesampul" className="text-blue-400 hover:underline"> GitHub</a>
-            <a href="https://www.linkedin.com/in/sam-pulaski-3098882ba/" className="text-pink-400 hover:underline"> LinkedIn</a>
-
+            <a href="https://www.linkedin.com/in/sampul" className="text-pink-400 hover:underline"> LinkedIn</a>
           </div>
         </div>
+      </header>
 
-        {/* Projects Section Toggle */}
-
-      </div>
-
+      <main className="w-full flex flex-col items-center">
       {/* Projects Section */}
       <div className="mt-6 max-w-2xl w-full mx-auto border border-gray-700 rounded-lg shadow-lg p-4">
           <h2 className="text-lg font-bold text-yellow-400 text-center">Projects</h2>
@@ -89,7 +87,14 @@ export default function Portfolio() {
             {projects.map((project, index) => (
               <div key={index} className="border-b border-gray-600 py-4 flex flex-col items-center text-center">
                 {project.image && (
-                  <img src={project.image} alt={project.title} className="w-24 h-24 rounded-lg border border-gray-500 mb-2" />
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    width="96"
+                    height="96"
+                    loading="lazy"
+                    className="w-24 h-24 rounded-lg border border-gray-500 mb-2 object-cover"
+                  />
                 )}
                 <div>
                   <h3 className="text-blue-400 text-lg font-semibold">{project.title}</h3>
@@ -116,6 +121,7 @@ export default function Portfolio() {
           </div>
         </div>
       </div>
+      </main>
     </div>
   );
 }

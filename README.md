@@ -20,7 +20,7 @@ Currently open to **summer 2026 SWE internships**.
 
 | Project | Description |
 |---|---|
-| [Depicto](https://depicto.ai) | Daily AI image guessing game — 48% day-30 retention (6× industry avg) |
+| [Depicto](https://depicto.ai) | Daily AI image guessing game — 48% day-30 retention (6× industry avg). Started as [Backwords](https://github.com/freesampul/backwords), a hackathon project |
 | [Nsilico](https://nsilico.net) | AI-powered survey response generation at scale |
 | [Git](https://github.com/freesampul/Git) | VCS built from scratch in Java — SHA-1, blob/tree/commit, branching, merge |
 | [Emotional Shopping](https://freesampul.github.io/EmotionalShopping/public/index.html) | Real-time emotion-driven product recs via Face-api.js |
@@ -37,6 +37,6 @@ React · Node.js · GraphQL · Firebase · Tailwind CSS · Java · Python
 ## Contact
 
 📧 [sampulaski@nyu.edu](mailto:sampulaski@nyu.edu)  
-💼 [LinkedIn](https://www.linkedin.com/in/sam-pulaski-3098882ba/)  
+💼 [LinkedIn](https://www.linkedin.com/in/sampul)  
 🐙 [GitHub](https://github.com/freesampul)  
 📄 [Resume](https://sampulaski.com/resume.pdf)
