@@ -69,7 +69,7 @@ export default function Portfolio() {
             </p>
             <p className="text-gray-300 mt-3 border-l-2 border-indigo-400 pl-3 text-left">
               <span className="text-indigo-400 text-xs uppercase tracking-wider block mb-1">My thesis</span>
-              I want to build tools that make people's lives easier — less friction, more time for what matters.
+              I want to build tools that make people's lives easier. More time for what matters.
             </p>
             <p className="text-gray-400 mt-2">
               Currently: <span className="text-green-400">open to summer 2027 internships</span>. Feel free to reach out.
