@@ -63,7 +63,7 @@ export default function Portfolio() {
               Hi, I'm <span className="text-indigo-400 font-bold">Sam Pulaski</span> — a <span className="text-indigo-400 font-bold">NYU</span> CS student interested in fintech and product. Most recently I interned at <span className="text-blue-400 font-bold">Ticketmaster</span> on the Demand team, scaling SMS workflows to 200K+ messages/day and rebuilding internal tools in React and GraphQL. I like building things that are fast, useful, and occasionally weird.
             </p>
             <p className="text-gray-400 mt-2">
-              Currently: <span className="text-green-400">open to summer 2026 internships</span>. Feel free to reach out.
+              Currently: <span className="text-green-400">open to summer 2027 internships</span>. Feel free to reach out.
             </p>
           </div>
         </div>

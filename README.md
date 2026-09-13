@@ -12,7 +12,7 @@ I'm a sophomore at NYU studying Computer Science (B.A. Individualized Study, exp
 
 Most recently interned at **Ticketmaster** on the Demand team, where I scaled SMS notification workflows to 200K+ messages/day and rebuilt internal tooling in React and GraphQL.
 
-Currently open to **summer 2026 SWE internships**.
+Currently open to **summer 2027 SWE internships**.
 
 ---
 
