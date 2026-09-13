@@ -8,7 +8,9 @@ Personal portfolio site for **Sam Pulaski** — NYU CS student, full-stack devel
 
 ## About
 
-I'm a sophomore at NYU studying Computer Science (B.A. Individualized Study, expected May 2028). I build fast, useful software — and occasionally weird stuff too.
+I'm studying Computer Science at NYU with a minor in Business Studies (expected May 2028).
+
+**My thesis:** I want to build tools that make people's lives easier — less friction, more time for what matters.
 
 Most recently interned at **Ticketmaster** on the Demand team, where I scaled SMS notification workflows to 200K+ messages/day and rebuilt internal tooling in React and GraphQL.
 

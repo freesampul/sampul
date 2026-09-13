@@ -9,30 +9,35 @@ export default function Portfolio() {
   const projects = [
     {
       title: "Depicto",
+      categories: ["AI", "Games"],
       description: "Daily AI-generated image guessing game — hit 48% day-30 retention, 6× the industry average. Started as Backwords, a hackathon project.",
       link: "https://depicto.ai",
       image: depicto
     },
     {
       title: "Nsilico",
+      categories: ["AI", "Research"],
       description: "AI-powered survey response generation — persona-based answers at scale.",
       link: "https://nsilico.net",
       image: nsil
     },
     {
       title: "Git",
+      categories: ["Developer Tools"],
       description: "VCS built from scratch in Java — SHA-1 hashing, blob/tree/commit model, branching, and merge.",
       link: "https://github.com/freesampul/Git",
       image: git
     },
     {
       title: "Emotional Shopping",
+      categories: ["AI", "E-commerce"],
       description: "Real-time emotion-driven product recommendations via facial expression detection with Face-api.js.",
       link: "https://freesampul.github.io/EmotionalShopping/public/index.html",
       image: emotions
     },
     {
       title: "Doople",
+      categories: ["Creative Tools"],
       description: "Build an avatar with hand-drawn assets",
       link: "https://doople.netlify.app/",
       image: doople
@@ -60,7 +65,11 @@ export default function Portfolio() {
             <h1 className="text-2xl font-bold text-yellow-400">sampulaski@nyu.edu</h1>
             <p className="text-gray-300">--------------------</p>
             <p className="text-gray-400">
-              Hi, I'm <span className="text-indigo-400 font-bold">Sam Pulaski</span> — a <span className="text-indigo-400 font-bold">NYU</span> CS student interested in fintech and product. Most recently I interned at <span className="text-blue-400 font-bold">Ticketmaster</span> on the Demand team, scaling SMS workflows to 200K+ messages/day and rebuilding internal tools in React and GraphQL. I like building things that are fast, useful, and occasionally weird.
+              Hi, I'm <span className="text-indigo-400 font-bold">Sam Pulaski</span> — studying <span className="text-indigo-400 font-bold">Computer Science at NYU</span> with a minor in Business Studies. I'm interested in fintech and product. Most recently I interned at <span className="text-blue-400 font-bold">Ticketmaster</span> on the Demand team, scaling SMS workflows to 200K+ messages/day and rebuilding internal tools in React and GraphQL.
+            </p>
+            <p className="text-gray-300 mt-3 border-l-2 border-indigo-400 pl-3 text-left">
+              <span className="text-indigo-400 text-xs uppercase tracking-wider block mb-1">My thesis</span>
+              I want to build tools that make people's lives easier — less friction, more time for what matters.
             </p>
             <p className="text-gray-400 mt-2">
               Currently: <span className="text-green-400">open to summer 2027 internships</span>. Feel free to reach out.
@@ -98,6 +107,13 @@ export default function Portfolio() {
                 )}
                 <div>
                   <h3 className="text-blue-400 text-lg font-semibold">{project.title}</h3>
+                  <ul aria-label={`${project.title} categories`} className="flex flex-wrap justify-center gap-1.5 mt-1 mb-2">
+                    {project.categories.map((category) => (
+                      <li key={category} className="rounded-full border border-gray-700 bg-gray-900 px-2 py-0.5 text-xs text-gray-300">
+                        {category}
+                      </li>
+                    ))}
+                  </ul>
                   <p className="text-gray-300">{project.description}</p>
                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline">View Project</a>
                 </div>
