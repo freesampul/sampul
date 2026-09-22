@@ -114,7 +114,7 @@ export default function Portfolio() {
                   />
                 )}
                 {project.monogram && (
-                  <div aria-hidden="true" className="w-24 h-24 rounded-lg border border-indigo-400 bg-gray-900 mb-2 flex items-center justify-center text-4xl font-bold text-indigo-400">
+                  <div aria-hidden="true" className="w-14 h-14 rounded-xl border border-gray-700 bg-gray-900 mb-2 flex items-center justify-center text-2xl font-semibold text-indigo-300">
                     {project.monogram}
                   </div>
                 )}
@@ -129,9 +129,14 @@ export default function Portfolio() {
                   </ul>
                   <p className="text-gray-300">{project.description}</p>
                   {project.story && (
-                    <details className="mt-3 mb-3 text-left">
-                      <summary className="cursor-pointer text-indigo-400 text-sm rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400">Why I built {project.title}</summary>
-                      <p className="mt-2 text-sm leading-relaxed text-gray-300">{project.story}</p>
+                    <details className="group my-2 text-center">
+                      <summary className="mx-auto flex w-fit cursor-pointer list-none items-center justify-center gap-1 py-1 text-xs text-indigo-300 rounded hover:text-indigo-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400 [&::-webkit-details-marker]:hidden">
+                        Why I built it
+                        <svg aria-hidden="true" viewBox="0 0 16 16" fill="none" className="h-3 w-3 transition-transform group-open:rotate-180">
+                          <path d="m4 6 4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </summary>
+                      <p className="mt-2 text-left text-sm leading-relaxed text-gray-300">{project.story}</p>
                     </details>
                   )}
                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline">View Project</a>
