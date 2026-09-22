@@ -114,7 +114,7 @@ export default function Portfolio() {
                   />
                 )}
                 {project.monogram && (
-                  <div aria-hidden="true" className="w-14 h-14 rounded-xl border border-gray-700 bg-gray-900 mb-2 flex items-center justify-center text-2xl font-semibold text-indigo-300">
+                  <div aria-hidden="true" className="w-24 h-24 rounded-lg border border-gray-500 bg-gray-900 mb-2 flex items-center justify-center text-4xl font-semibold text-indigo-300">
                     {project.monogram}
                   </div>
                 )}
