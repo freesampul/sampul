@@ -8,6 +8,14 @@ import nsil from "./proj-images/nsil.png";
 export default function Portfolio() {
   const projects = [
     {
+      title: "Syllingo",
+      categories: ["Education", "Language Learning"],
+      description: "Japanese practice built for my class, using only the vocabulary, kanji, and grammar we've covered.",
+      story: "I built Syllingo for my Japanese class. We had a growing list of vocabulary, kanji, and grammar patterns, but finding ways to practice exactly what we were learning was difficult. I'd been using ChatGPT to generate sentences with our grammar patterns, and wanted to make that kind of practice easier for my classmates too. Syllingo gives us a place to practice with the material we've covered so far, keeping the vocabulary familiar while we work on putting it all together.",
+      link: "https://syllingo.com",
+      monogram: "S"
+    },
+    {
       title: "Depicto",
       categories: ["AI", "Games"],
       description: "Daily AI-generated image guessing game — hit 48% day-30 retention, 6× the industry average. Started as Backwords, a hackathon project.",
@@ -105,6 +113,11 @@ export default function Portfolio() {
                     className="w-24 h-24 rounded-lg border border-gray-500 mb-2 object-cover"
                   />
                 )}
+                {project.monogram && (
+                  <div aria-hidden="true" className="w-24 h-24 rounded-lg border border-indigo-400 bg-gray-900 mb-2 flex items-center justify-center text-4xl font-bold text-indigo-400">
+                    {project.monogram}
+                  </div>
+                )}
                 <div>
                   <h3 className="text-blue-400 text-lg font-semibold">{project.title}</h3>
                   <ul aria-label={`${project.title} categories`} className="flex flex-wrap justify-center gap-1.5 mt-1 mb-2">
@@ -115,6 +128,12 @@ export default function Portfolio() {
                     ))}
                   </ul>
                   <p className="text-gray-300">{project.description}</p>
+                  {project.story && (
+                    <details className="mt-3 mb-3 text-left">
+                      <summary className="cursor-pointer text-indigo-400 text-sm rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400">Why I built {project.title}</summary>
+                      <p className="mt-2 text-sm leading-relaxed text-gray-300">{project.story}</p>
+                    </details>
+                  )}
                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline">View Project</a>
                 </div>
               </div>

@@ -22,6 +22,7 @@ Currently open to **summer 2027 SWE internships**.
 
 | Project | Description |
 |---|---|
+| [Syllingo](https://syllingo.com) | Japanese practice built for my class, using only the vocabulary, kanji, and grammar we've covered. |
 | [Depicto](https://depicto.ai) | Daily AI image guessing game — 48% day-30 retention (6× industry avg). Started as [Backwords](https://github.com/freesampul/backwords), a hackathon project |
 | [Nsilico](https://nsilico.net) | AI-powered survey response generation at scale |
 | [Git](https://github.com/freesampul/Git) | VCS built from scratch in Java — SHA-1, blob/tree/commit, branching, merge |
