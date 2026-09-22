@@ -110,11 +110,11 @@ export default function Portfolio() {
                     width="96"
                     height="96"
                     loading="lazy"
-                    className="w-24 h-24 rounded-lg border border-gray-500 mb-2 object-cover"
+                    className="w-24 h-24 shrink-0 rounded-lg border border-gray-500 mb-2 object-cover"
                   />
                 )}
                 {project.monogram && (
-                  <div aria-hidden="true" className="w-24 h-24 rounded-lg border border-gray-500 bg-gray-900 mb-2 flex items-center justify-center text-4xl font-semibold text-indigo-300">
+                  <div aria-hidden="true" className="w-24 h-24 shrink-0 rounded-lg border border-gray-500 bg-gray-900 mb-2 flex items-center justify-center text-[5.5rem] leading-none font-bold text-indigo-300">
                     {project.monogram}
                   </div>
                 )}
